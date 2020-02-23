@@ -8,16 +8,10 @@ object Start {
     lesson1()
   }
 
-  implicit class DateInterpolator(val sc: StringContext) extends AnyVal {
-    def date(args: Any*): LocalDate = {
-      
-    }
-  }
-
   /* just comment */
   /** Documentation */
   def lesson1() {
-    println(s"power ${power(2, 2)}")
+//    println(s"power ${power(2, 2)}")
 
 //    var res: Long = 1
 //    for (i <- "Hello") {
@@ -43,7 +37,16 @@ object Start {
 //    println(x, y)
 
 //    countdown(7)
+
+
+
+    val year = 2017
+    val month = 11
+    val day = 10
+    val d = date"$year-$month-$day"
+    println(d)
   }
+
 
   def power(x: BigDecimal, n: Int): BigDecimal = {
     print(x, n)
@@ -79,4 +82,24 @@ object Start {
     else if (value < 0) -1
     else 0
   }
+
+  implicit class DateInterpolator(val sc: StringContext) extends AnyVal {
+    def date(args: Any*): LocalDate = {
+      try {
+        if (args.length != 3) throw new IllegalArgumentException("there aren’t three arguments")
+        val (year, month, day) = (args(0).toString.toInt, args(1).toString.toInt, args(2).toString.toInt)
+        for (x <- sc.parts) if (x.length > 0 && !x.equals("-")) throw new IllegalArgumentException("Date parts aren’t separated by dashes")
+        LocalDate.of(year, month, day)
+      }
+      catch {
+        case ex: NumberFormatException =>
+          println("Date parts aren’t integer")
+          throw ex
+        case ex: IllegalArgumentException =>
+          println("See exception message for detail")
+          throw ex
+      }
+    }
+  }
+
 }
