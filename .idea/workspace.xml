@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4986a9c-1f1c-4cb8-ac72-e550a6ad4bac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DateInterpolator.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lesson2.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ScalaNext/Start$.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ScalaNext/Start$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ScalaNext/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ScalaNext/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ScalaNext/Start$DateInterpolator$.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ScalaNext/Start$DateInterpolator$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ScalaNext/Start$DateInterpolator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ScalaNext/Start$DateInterpolator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Start.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +44,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ScalaApp">
     <configuration name="ScalaApp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Start" />
       <module name="ScalaNext" />
@@ -52,6 +52,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ScalaREPL" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="ScalaNext" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="javaOptions" value="-Djline.terminal=NONE" />
+      <option name="myConsoleArgs" value="-usejavacp" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ScalaApp" />
+      <item itemvalue="Scala REPL.ScalaREPL" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -75,61 +89,49 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="578" y="309" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1582462958041" />
-    <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582459287665">
+    <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582974548245">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1582459287665" />
+    <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1582974548245" />
     <state x="762" y="296" width="759" height="368" key="#xdebugger.XInspectDialog" timestamp="1582463390259">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="762" y="296" width="759" height="368" key="#xdebugger.XInspectDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1582463390259" />
-    <state width="1638" height="345" key="GridCell.Tab.0.bottom" timestamp="1582463503709">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1582979267624">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="345" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1582463503709" />
-    <state width="1638" height="345" key="GridCell.Tab.0.center" timestamp="1582463503708">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1582979267624" />
+    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1582979267623">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="345" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1582463503708" />
-    <state width="1638" height="345" key="GridCell.Tab.0.left" timestamp="1582463503707">
+    <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1582979267623" />
+    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1582979267623">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="345" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1582463503707" />
-    <state width="1638" height="345" key="GridCell.Tab.0.right" timestamp="1582463503708">
+    <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1582979267623" />
+    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1582979267623">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="345" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1582463503708" />
-    <state width="1638" height="345" key="GridCell.Tab.1.bottom" timestamp="1582463371106">
+    <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1582979267623" />
+    <state width="1638" height="345" key="GridCell.Tab.1.bottom" timestamp="1582534346853">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="345" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1582463371106" />
-    <state width="1638" height="345" key="GridCell.Tab.1.center" timestamp="1582463371105">
+    <state width="1638" height="345" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1582534346853" />
+    <state width="1638" height="345" key="GridCell.Tab.1.center" timestamp="1582534346853">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="345" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1582463371105" />
-    <state width="1638" height="345" key="GridCell.Tab.1.left" timestamp="1582463371104">
+    <state width="1638" height="345" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1582534346853" />
+    <state width="1638" height="345" key="GridCell.Tab.1.left" timestamp="1582534346853">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="345" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1582463371104" />
-    <state width="1638" height="345" key="GridCell.Tab.1.right" timestamp="1582463371105">
+    <state width="1638" height="345" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1582534346853" />
+    <state width="1638" height="345" key="GridCell.Tab.1.right" timestamp="1582534346853">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="345" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1582463371105" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/Start.scala</url>
-          <line>14</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/Start.scala</url>
-          <line>88</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="1638" height="345" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1582534346853" />
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1582977536818">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1582977536818" />
   </component>
 </project>

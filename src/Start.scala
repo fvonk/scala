@@ -2,15 +2,30 @@ import scala.io.StdIn
 import scala.math
 import java.time.LocalDate
 
+import scala.collection.mutable.ArrayBuffer
+
 object Start {
 
   def main(args: Array[String]): Unit = {
-    lesson1()
+//    lesson1()
+    new Lesson2().training()
   }
 
   /* just comment */
   /** Documentation */
   def lesson1() {
+    var b = Array(1, 2, 3, 4)
+//    println(b.length, b(0))
+    for (i <- 0.until(b.length))
+      println(i, b(i))
+    for (a <- b)
+      println("a", a)
+
+    val newB = for (elem <- b if elem % 2 == 0) yield 2 * elem
+    println(newB.toString)
+    newB.foreach(println(_))
+    val b2 = ArrayBuffer(1, 2, 3, 8)
+    println(b2.toString, b.toString)
 //    println(s"power ${power(2, 2)}")
 
 //    var res: Long = 1
@@ -40,11 +55,11 @@ object Start {
 
 
 
-    val year = 2017
-    val month = 11
-    val day = 10
-    val d = date"$year-$month-$day"
-    println(d)
+//    val year = 2017
+//    val month = 11
+//    val day = 10
+//    val d = date"$year-$month-$day"
+//    println(d)
   }
 
 
