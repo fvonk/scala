@@ -191,7 +191,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "/Users/pavelkozlov/.jabba/jdk/adopt@1.11.0-7/Contents/Home",
+                "home": "/Library/Java/JavaVirtualMachines/jdk-13.0.2.jdk/Contents/Home",
                 "options": [
                     "-Duser.dir=/Users/pavelkozlov/Developer/scala/hello-world/project"
                 ]
