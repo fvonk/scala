@@ -57,5 +57,60 @@ object Ch5_Ex5 extends App {
   val larry = new Student(1L, "Larry")
   larry.setName(larry.getName() + " Laffer")
   larry.id = larry.id + 1
+  larry.id_=(22)
+  larry.id += 1
   println(larry)
+}
+
+object Ch5_Ex6 extends App {
+  class Person(a: Int) {
+    var age = Math.max(a, 0)
+  }
+
+  val paul = new Person(-2)
+  assert(paul.age == 0)
+  println(paul.age)
+}
+
+object Ch5_Ex7 extends App {
+
+  class Person(fullName: String) {
+    val firstName = fullName.split(" ")(0)
+    val lastName = fullName.split(" ")(1)
+  }
+
+  val person = new Person("Mister Smith")
+  println(person.firstName, person.lastName)
+}
+
+object Ch5_Ex8 extends App {
+  class Car(val manufacturer: String,
+            val modelName: String,
+            val modelYear: Int,
+            var licensePlate: String) {
+
+    def this(manufacturer: String, modelName: String) {
+      this(manufacturer, modelName, -1, "")
+    }
+    def this(manufacturer: String, modelName: String, modelYear: Int) {
+      this(manufacturer, modelName, modelYear, "")
+    }
+    def this(manufacturer: String, modelName: String, licensePlate: String) {
+      this(manufacturer, modelName, -1, licensePlate)
+    }
+    override def toString() = s"Car[$manufacturer, $modelName, $modelYear, $licensePlate)"
+  }
+  val car = new Car("Honda", "Civic")
+  println(car)
+  new Car("Honda", "Civic", "ZL-GJ-37")
+  new Car("Honda", "Civic", 2008, "ZL-GJ-37")
+}
+
+object Ch5_Ex10 extends App {
+  class Employee(val name: String = "John", var salary: Double = 0.0) {
+    override def toString: String = s"Employee $name, $salary"
+  }
+
+  val employee = new Employee()
+  println(employee)
 }
